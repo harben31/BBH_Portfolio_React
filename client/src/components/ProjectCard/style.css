@@ -1,0 +1,14 @@
+.projectCard{
+    background: lightcyan;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap:wrap-reverse; */
+    min-height: 200px;
+    padding: 10px;
+    flex: 1 1 100px;
+}
+
+#imageStandIn{
+    background: lightgreen;
+    height: 100px;
+}

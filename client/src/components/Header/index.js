@@ -1,10 +1,11 @@
 import React from 'react';
+import './style.css'
 
 const Header = () => {
     return(
-        <div>
-            HEADER
-        </div>
+        <header id='portHeader'>
+            <h1>Benjamin Harris</h1>
+        </header>
     );
 };
 
