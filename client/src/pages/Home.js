@@ -4,6 +4,8 @@ import Footer from '../Footer';
 import Search from '../Search';
 import ProjectContainer from '../ProjectContainer';
 
+import API from '../utils/API'
+
 //Prob have a 'projects' in the 'page' folder. Using router to direct there and maybe the 'in picture view(?)' thing.
 //at least be able to use router to get to a page with only one project at a time on it. 
 //use search and state to be able to search by technologies.
