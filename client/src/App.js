@@ -1,11 +1,11 @@
 import React from 'react';
 import "./App.css";
-import Home from './pages/Home'
+import Browse from './pages/Browse'
 
 function App() {
     return (
         <div>
-          <Home />
+          <Browse />
         </div>
     );
 };

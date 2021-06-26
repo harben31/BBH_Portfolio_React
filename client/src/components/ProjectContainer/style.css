@@ -1,3 +1,4 @@
 #projectContainer{
     display: flex;
+    flex-wrap: wrap;
 }

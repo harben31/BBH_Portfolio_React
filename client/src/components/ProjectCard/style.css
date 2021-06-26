@@ -2,10 +2,15 @@
     background: lightcyan;
     display: flex;
     flex-direction: column;
-    /* flex-wrap:wrap-reverse; */
     min-height: 200px;
+    min-width: 40%;
     padding: 10px;
-    flex: 1 1 100px;
+    flex: 2 2 100px;
+}
+
+.cardHeader{
+    background: brown;
+    text-align: center;
 }
 
 #imageStandIn{

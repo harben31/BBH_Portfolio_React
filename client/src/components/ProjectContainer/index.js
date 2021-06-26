@@ -2,15 +2,17 @@ import React from 'react';
 import ProjectCard from '../ProjectCard';
 import './style.css';
 
-const ProjectContainer = () => {
+const ProjectContainer = (props) => {
+    console.log('ProjectContainer props', props);
     return(
         <div id='projectContainer'>
-            <ProjectCard/>
-            <ProjectCard/>
-            <ProjectCard/>
-            <ProjectCard/> 
-            <ProjectCard/> 
-            <ProjectCard/> 
+            {props.projects.map(project => [
+                 <ProjectCard
+                 project={project}/>
+            ])}
+                {/* <ProjectCard
+                project={props}/> */}
+           
         </div>
     );
 };
