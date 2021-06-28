@@ -14,18 +14,45 @@ import API from '../utils/API';
 
 const Browse = () => {
     const [projects, setProjects] = useState([]);
+    const [filter, setFilter] = useState([]);
     
     useEffect(() => {
         loadProjects();
     }, []);
-    console.log(projects);
+    
+    // let filterValue;
+
+    // useEffect(() => {
+    //     filterValue = filter
+    //     //need to set value to 
+    // }, [filter])
+
+
+    const handleFilter = event => {
+        const filterValue = event.target.value.trim();
+        console.log(filterValue);
+        const filterProjVar = projects.filter(( proj ) => {
+            let projValue = Object.values(proj).join('').toLowerCase();
+            return projValue.indexOf(filterValue.toLowerCase()) !== -1;
+        })
+        console.log(filterProjVar);
+        //resetting projects state eachtime so on subsequent searches it is only searching the smaller data set
+        setFilter(filterProjVar);
+    }
+
+    // useEffect(() => {
+    //     const filterProjVar = projects.filter(( proj ) => {
+    //         let projValue = Object.values(proj).values.join('').toLowerCase();
+    //         return projValue.indexOf(filterValue.toLowerCase()) !== -1;
+    //     })
+    // }, [filter])
 
     const loadProjects = () => {
         console.log('logged')
         API.getProjects()
             .then((res) => {
-                console.log('then', res.data);
                 setProjects(res.data);
+                setFilter(res.data);
             })
             .catch((err) => console.log(err))
     };
@@ -34,8 +61,8 @@ const Browse = () => {
     return(
         <div>
             <Header/>
-            <Search/>
-            <ProjectContainer projects={projects}/>
+            <Search handleFilter={handleFilter} />
+            <ProjectContainer projects={filter}/>
             <Footer/>
         </div>
     );

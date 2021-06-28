@@ -8,6 +8,7 @@ const ProjectContainer = (props) => {
         <div id='projectContainer'>
             {props.projects.map(project => [
                  <ProjectCard
+                 key={project._id}
                  project={project}/>
             ])}
                 {/* <ProjectCard

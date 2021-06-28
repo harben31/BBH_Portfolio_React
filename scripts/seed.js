@@ -127,18 +127,7 @@ const seedProject = [
 			gitHubUrl: 'https://github.com/harben31'
 		}]
 	},
-	{
-		screenShot: '',
-		repoUrl: '',
-		deployedUrl: '',
-		title: '',
-		description: '',
-		technology: 'JavaScript, CSS, HTML',
-		collaborators: [{
-			name: 'Benjamin Harris',
-			gitHubUrl: 'https://github.com/harben31'
-		}]
-	},
+
 	{
 		screenShot: '',
 		repoUrl: 'https://github.com/harben31/bbh_homework_wk12',
@@ -163,18 +152,18 @@ const seedProject = [
 			gitHubUrl: 'https://github.com/harben31'
 		}]
 	},
-	{
-		screenShot: '',
-		repoUrl: '',
-		deployedUrl: '',
-		title: '',
-		description: '',
-		technology: 'JavaScript, CSS, HTML',
-		collaborators: [{
-			name: 'Benjamin Harris',
-			gitHubUrl: 'https://github.com/harben31'
-		}]
-	},
+	// {
+	// 	screenShot: '',
+	// 	repoUrl: '',
+	// 	deployedUrl: '',
+	// 	title: '',
+	// 	description: '',
+	// 	technology: 'JavaScript, CSS, HTML',
+	// 	collaborators: [{
+	// 		name: 'Benjamin Harris',
+	// 		gitHubUrl: 'https://github.com/harben31'
+	// 	}]
+	// },
 ];
 
 db.Project

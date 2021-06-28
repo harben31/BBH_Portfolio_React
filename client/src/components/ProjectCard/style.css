@@ -1,11 +1,16 @@
 .projectCard{
     background: lightcyan;
     display: flex;
+    flex: 2 2 100px;
     flex-direction: column;
     min-height: 200px;
     min-width: 40%;
     padding: 10px;
-    flex: 2 2 100px;
+}
+
+.imageStandIn{
+    background: lightgreen;
+    height: 100px;
 }
 
 .cardHeader{
@@ -13,7 +18,10 @@
     text-align: center;
 }
 
-#imageStandIn{
-    background: lightgreen;
-    height: 100px;
+.description{
+    padding: 10px;
+}
+
+.tech{
+    padding: 10px;
 }

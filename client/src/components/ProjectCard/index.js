@@ -4,23 +4,22 @@ import './style.css';
 //whole card link? granular links: tech, names? or leave that to the single project page?
 const ProjectCard = (props) => {
     const project=props.project
-    console.log('projectcard',props);
     return (
-        <div className='projectCard'>
-            <div id='imageStandIn'>
-                <div className='cardHeader'>
+        <div className='projectCard' >
+            <div className='imageStandIn' >
+            </div>   
+                <div className='cardHeader' >
                     <h2>{project.title}</h2>
                 </div>
-                <div className='cardInfo'>
-                    <p>{project.description}</p>
-                    <p>Created using: {project.technologies}</p>
+                <div className='cardInfo' >
+                    <p className='description' >{project.description}</p>
+                    <p className='tech' >Created using: {project.technology}</p>
                     <ul>
                         {/* {props.collaborators.map(collaborators => {
                             // <p><a href={collaborators.gitHubUrl}>{collaborators.name}</a></p>
                         })} */}
                     </ul>
                 </div>
-            </div>   
         </div>
     );
 };
