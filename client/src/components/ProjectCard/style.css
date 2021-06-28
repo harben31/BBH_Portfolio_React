@@ -15,6 +15,7 @@
 
 .cardHeader{
     background: brown;
+    cursor: pointer;
     text-align: center;
 }
 

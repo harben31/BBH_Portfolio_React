@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Search from '../components/Search';
 import ProjectContainer from '../components/ProjectContainer';
+import LargeProjPage from '../components/LargeProjPage';
 
 import API from '../utils/API';
 
@@ -15,17 +16,20 @@ import API from '../utils/API';
 const Browse = () => {
     const [projects, setProjects] = useState([]);
     const [filter, setFilter] = useState([]);
+    const [manyOneToggle, setManyOneToggle] = useState(0);
     
     useEffect(() => {
-        loadProjects();
+        handleLoadProjects();
     }, []);
     
-    // let filterValue;
-
-    // useEffect(() => {
-    //     filterValue = filter
-    //     //need to set value to 
-    // }, [filter])
+    const handleLoadProjects = () => {
+        API.getProjects()
+            .then((res) => {
+                setProjects(res.data);
+                setFilter(res.data);
+            })
+            .catch((err) => console.log(err));
+    };
 
 
     const handleFilter = event => {
@@ -34,35 +38,30 @@ const Browse = () => {
         const filterProjVar = projects.filter(( proj ) => {
             let projValue = Object.values(proj).join('').toLowerCase();
             return projValue.indexOf(filterValue.toLowerCase()) !== -1;
-        })
-        console.log(filterProjVar);
-        //resetting projects state eachtime so on subsequent searches it is only searching the smaller data set
+        });
         setFilter(filterProjVar);
-    }
-
-    // useEffect(() => {
-    //     const filterProjVar = projects.filter(( proj ) => {
-    //         let projValue = Object.values(proj).values.join('').toLowerCase();
-    //         return projValue.indexOf(filterValue.toLowerCase()) !== -1;
-    //     })
-    // }, [filter])
-
-    const loadProjects = () => {
-        console.log('logged')
-        API.getProjects()
-            .then((res) => {
-                setProjects(res.data);
-                setFilter(res.data);
-            })
-            .catch((err) => console.log(err))
     };
 
+    const handleSmCardClick = event => {
+        setManyOneToggle(1);
+    };
 
     return(
         <div>
             <Header/>
-            <Search handleFilter={handleFilter} />
-            <ProjectContainer projects={filter}/>
+            {!manyOneToggle ? 
+                <>
+                    <Search handleFilter={handleFilter} />
+                    <ProjectContainer 
+                    projects={filter}
+                    handleSmCardClick={handleSmCardClick}
+                    />
+                </>
+             : 
+                <LargeProjPage />
+            }
+            {/* <Search handleFilter={handleFilter} />
+            <ProjectContainer projects={filter}/> */}
             <Footer/>
         </div>
     );

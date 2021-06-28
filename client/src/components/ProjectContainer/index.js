@@ -9,7 +9,8 @@ const ProjectContainer = (props) => {
             {props.projects.map(project => [
                  <ProjectCard
                  key={project._id}
-                 project={project}/>
+                 project={project}
+                 handleSmCardClick={props.handleSmCardClick}/>
             ])}
                 {/* <ProjectCard
                 project={props}/> */}
