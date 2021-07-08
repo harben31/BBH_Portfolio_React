@@ -1,20 +1,20 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import ProjectCard from '../ProjectCard';
 import './style.css';
 
 const ProjectContainer = (props) => {
-    console.log('ProjectContainer props', props);
+    // console.log('ProjectContainer props', props);
     return(
         <div id='projectContainer'>
             {props.projects.map(project => [
-                 <ProjectCard
-                 key={project._id}
-                 project={project}
-                 handleSmCardClick={props.handleSmCardClick}/>
+                <ProjectCard
+                    key={project._id}
+                    project={project}
+                    handleSmCardClick={props.handleSmCardClick}/>
             ])}
-                {/* <ProjectCard
+            {/* <ProjectCard
                 project={props}/> */}
-           
         </div>
     );
 };

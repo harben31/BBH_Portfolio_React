@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './style.css';
 
 const LargeProjPage = (props) => {
+    // console.log(props, 'largeprojpage');
     return(
         <section id='largeProjCard'>
             <div id='imagePlaceHolder'>

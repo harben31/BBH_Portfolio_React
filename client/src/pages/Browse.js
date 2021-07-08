@@ -25,6 +25,7 @@ const Browse = () => {
     const handleLoadProjects = () => {
         API.getProjects()
             .then((res) => {
+                console.log('API CALAL', res.data);
                 setProjects(res.data);
                 setFilter(res.data);
             })
@@ -34,7 +35,7 @@ const Browse = () => {
 
     const handleFilter = event => {
         const filterValue = event.target.value.trim();
-        console.log(filterValue);
+        // console.log(filterValue);
         const filterProjVar = projects.filter(( proj ) => {
             let projValue = Object.values(proj).join('').toLowerCase();
             return projValue.indexOf(filterValue.toLowerCase()) !== -1;
@@ -42,9 +43,9 @@ const Browse = () => {
         setFilter(filterProjVar);
     };
 
-    const handleSmCardClick = event => {
-        setManyOneToggle(1);
-    };
+    // const handleSmCardClick = () => {
+    //     setManyOneToggle(1);
+    // };
 
     return(
         <div>
@@ -53,12 +54,12 @@ const Browse = () => {
                 <>
                     <Search handleFilter={handleFilter} />
                     <ProjectContainer 
-                    projects={filter}
-                    handleSmCardClick={handleSmCardClick}
+                        projects={filter}
+                        // handleSmCardClick={handleSmCardClick}
                     />
                 </>
-             : 
-                <LargeProjPage />
+                : 
+                <LargeProjPage projects={projects}/>
             }
             {/* <Search handleFilter={handleFilter} />
             <ProjectContainer projects={filter}/> */}

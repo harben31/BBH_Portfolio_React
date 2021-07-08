@@ -1,4 +1,5 @@
 #portFoot{
-    background: chartreuse;
+    background: rgb(217, 203, 158);
+    border-top: 2px solid black;
     padding: 10px;
 }

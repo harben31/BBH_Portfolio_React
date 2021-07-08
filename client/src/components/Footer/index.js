@@ -12,8 +12,11 @@ const Footer = () => {
                 <li>Email: <a href='mailto:harben31@gmail.com'>harben31@gmail.com</a></li>
                 <li>Telephone: <a href='tel:512-815-0281'>(512) 815-0281</a></li>
             </ul>
+            <div className='infoForm'>
+                <button className='infoBtn'>Leave Me A Message</button>
+            </div>
         </footer>
-    )
+    );
 };
 
 export default Footer;
