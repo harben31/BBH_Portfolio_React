@@ -1,0 +1,40 @@
+.modalWrap{
+    align-items: center;
+    background: rgba(42, 44, 43, 0.644);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    /* top: 25%;
+    left: 30%; */
+    width: 100vw;
+    z-index: 1;
+}
+
+.messageForm {
+    background: rgb(180 ,154, 70);
+    border: 2px solid black;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    top: 50%;
+    width: 500px;
+}
+
+.textInputs {
+    align-self: center;
+    width: 90%;
+    padding: 5px;
+    margin: 20px;
+}
+
+.messageArea {
+    height: 150px;
+}
+
+.formBtn {
+    cursor: pointer;
+    height: 20px;
+    margin: 0 90px 20px ;
+}

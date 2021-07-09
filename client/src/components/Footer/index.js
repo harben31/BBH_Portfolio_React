@@ -1,7 +1,8 @@
 import React from 'react';
 import './style.css';
 
-const Footer = () => {
+const Footer = (props) => {
+    console.log('footer props', props);
     return(
         <footer id='portFoot'>
             <h1>Contact Me!</h1>
@@ -12,9 +13,9 @@ const Footer = () => {
                 <li>Email: <a href='mailto:harben31@gmail.com'>harben31@gmail.com</a></li>
                 <li>Telephone: <a href='tel:512-815-0281'>(512) 815-0281</a></li>
             </ul>
-            <div className='infoForm'>
-                <button className='infoBtn'>Leave Me A Message</button>
-            </div>
+                {/* <div className='infoForm'>
+                    <button className='infoBtn' onClick={props.handleModalToggle}>Leave Me A Message</button>
+                </div> */}
         </footer>
     );
 };
