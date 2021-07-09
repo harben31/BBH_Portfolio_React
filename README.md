@@ -1,29 +1,32 @@
-# Create React Express App
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Benjamin's React Profile
+Table of Contents:
+* [Contributors:](#Contributtors)
+* [Description](#Description)
+* [Technologies_used](#Technologies_used)
+* [Usage](#Usage)
+* [License-Info](#License-Info)
+* [Questions](#Questions)
+    
+## Contributors: 
+Benjamin Harris
 
-## About This Boilerplate
+## Description:
+ My personal portfolio featuring projects completed while attending UW's full-stack coding bootcamp in 2021.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## Technologies_used:
+* Mongo DB
+* Express.js
+* React
+* Node.js
+* Mongoose.js
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Usage:
+The app features information about six selected projects completed while attending UW coding bootcamp. The information is fed from an api featuring  a lot of my work. The projects are displayed with a screenshot and a short description, links to the deployed app, links to the app's repo, technologies used in creating the app and all authors of the app. There is contact info at the bottom of the page including a link to my resume, a mailto link to my email address. 
 
-## Starting the app locally
+## License-Info:
+MIT License
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
-```
-npm install
-```
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+## Questions:
+* Email: [harben31@gmail.com](mailto:harben31@gmail.com)
+* GitHub: [harben31](https://www.github.com/harben31)
