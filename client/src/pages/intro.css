@@ -1,0 +1,30 @@
+.introBack{
+    align-items: center;
+    background:rgb(170, 189, 187);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.introCard{
+    background: salmon;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(55, 65, 64, .7);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 65vw;
+}
+
+.introSideBar{
+    display: flex;
+}
+
+.introPic{
+    height: fit-content;
+    width: 80%;
+}
+
+.introBio{
+    padding: 0 15px;
+}

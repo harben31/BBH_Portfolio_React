@@ -16,11 +16,11 @@ const ProjectCard = (props) => {
             </div>
             <div className='cardInfo' >
                 <p className='description infoBits' >{project.description}</p>
-                <p className='tech infoBits' >Created using: {project.technology}</p>
+                <p className='tech infoBits' >Created using {project.technology}</p>
                 <p className='deployedLink infoBits'><a href={project.deployedUrl}>Deployed App</a></p>
                 <p className='repoLink infoBits'><a href={project.repoUrl}>Repo</a></p>
                 <ul className='collab infoBits'>
-                    <p>Authors:</p> infoBits
+                    <p>Authors:</p>
                     {project.collaborators.map(collaborators => [
                         <p key={collaborators.name}><a href={collaborators.gitHubUrl}>{collaborators.name}</a></p>
                     ]

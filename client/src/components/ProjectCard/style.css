@@ -41,3 +41,9 @@
 .tech {
     padding-bottom: 10px;
 } */
+
+@media screen and (max-width: 668px){
+    .projectCard{
+        min-width: 90%
+    }
+}
